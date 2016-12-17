@@ -9,7 +9,7 @@
         android:id="@+id/tvHello"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World"
+        android:text="@string/hello_world"
         android:textColor="#ff0000"
         android:visibility="gone" />
 
@@ -39,61 +39,97 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="3"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="3">
 
         <EditText
             android:id="@+id/editText1"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:layout_weight="1"
             android:gravity="center"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:text="0" />
 
         <EditText
             android:id="@+id/editText2"
-            android:layout_weight="1"
-            android:text="0"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:gravity="center"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:text="0" />
 
         <TextView
             android:id="@+id/tvResult"
-            android:text="0"
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0" />
     </LinearLayout>
 
     <Button
         android:id="@+id/btnCalculation"
-        android:text="Calcuation"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/calcuation" />
 
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:checkedButton="@+id/rdPlus">
+
+        <RadioButton
+            android:id="@+id/rdPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/radio_margin_left"
+            android:text="+" />
+
+        <RadioButton
+            android:id="@+id/rdMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/radio_margin_left"
+            android:text="-" />
+
+        <RadioButton
+            android:id="@+id/rdMutiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/radio_margin_left"
+            android:text="*" />
+
+        <RadioButton
+            android:id="@+id/rdDivide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/radio_margin_left"
+            android:text="/" />
+
+    </RadioGroup>
 
     <ProgressBar
-        style="@android:style/Widget.Holo.ProgressBar.Large"
+        style="@style/ProgressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <ProgressBar
         style="@android:style/Widget.Holo.ProgressBar.Horizontal"
-        android:indeterminate="true"
-        android:progress="33"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:progress="33" />
 
     <Switch
-        android:text="เปิดไฟ"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="เปิดไฟ" />
 
     <ImageView
-        android:src="@drawable/ic_launcher"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher" />
 </LinearLayout>

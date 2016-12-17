@@ -1,12 +1,18 @@
 package com.example.thum.helloworld;
 
+import android.content.Context;
+import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
+import android.view.Display;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,6 +37,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.layout_linear); // Inflate from XML
 
         initInstances();
+
+        // How to call windowManager in not Avitity class
+        /*MainActivity.this == context*/
+        /*WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);*/
+
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x; // Screen Width
+        int height = size.y; // Screen Height
+        Toast.makeText(MainActivity.this, "Width = " + width + ", Height = " + height,
+                Toast.LENGTH_SHORT).show();
     }
 
     private void initInstances() {
@@ -82,9 +100,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             int sum = val1 + val2;
             tvResult.setText(String.valueOf(sum));
 
-            Log.d("Calculation","Result = " + sum);
+            Log.d("Calculation", "Result = " + sum);
 
-            Toast.makeText(MainActivity.this, "Result = "+sum ,
+            Toast.makeText(MainActivity.this, "Result = " + sum,
                     Toast.LENGTH_SHORT).show();
         }
     }
@@ -106,5 +124,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     return true;
                 }*/
         return false;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -7,7 +7,7 @@
     android:weightSum="1">
 
     <View android:id="@+id/viewRed"
-        android:layout_width="60dp"
+        android:layout_width="@dimen/view_layout_width"
         android:layout_height="60dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="100dp"
