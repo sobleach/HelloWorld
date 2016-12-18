@@ -138,6 +138,16 @@
                 android:indeterminate="true"
                 android:progress="33" />
 
+            <com.example.thum.helloworld.CustomViewGroup
+                android:id="@+id/viewGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.example.thum.helloworld.CustomViewGroup
+                android:id="@+id/viewGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
             <mehdi.sakout.fancybuttons.FancyButton
                 android:id="@+id/btn_spotify"
                 android:layout_width="wrap_content"

@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView tvResult;
     Button btnCopy;
     Button btnCalculation;
-
+    CustomViewGroup viewGroup1;
+    CustomViewGroup viewGroup2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +75,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCalculation = (Button) findViewById(R.id.btnCalculation);
 
         btnCalculation.setOnClickListener(this);
+
+        viewGroup1 = (CustomViewGroup) findViewById(R.id.viewGroup1);
+        viewGroup2 = (CustomViewGroup) findViewById(R.id.viewGroup2);
+
+        viewGroup1.setButtonText("Hello");
+        viewGroup2.setButtonText("World");
     }
 
 
