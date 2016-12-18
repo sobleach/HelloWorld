@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/btn_default_pressed" android:state_pressed="true" />
+    <item android:drawable="@drawable/btn_default_selected" android:state_selected="true" />
+    <item android:drawable="@drawable/btn_default_selected" android:state_focused="true" />
+    <!--ตัวที่ไม่มีการระบุ state ให้ใส่ไว้ล่างสุดเท่านั้น มันจะตรวจจับจากบนลงล่าง-->
+    <!--เพราะถ้ามันเห็นว่าใช้งานได้แล้วมันจะเอารูปนั้นไปใช้เลย ทำให้ไม่มีการสลับสถานะ-->
+    <item android:drawable="@drawable/btn_default_normal" />
+</selector>

@@ -3,4 +3,6 @@
     <string name="hello_world">Hello World</string>
     <string name="setting">Setting</string>
     <string name="calcuation">Calcuation</string>
+    <string name="skip">Skip</string>
+    <string name="by_continuing_your_accept_the_term_of_use_and_privacy_policy">By continuing your accept the Term of Use and Privacy Policy</string>
 </resources>

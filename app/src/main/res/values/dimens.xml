@@ -4,4 +4,5 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="view_layout_width">60dp</dimen>
     <dimen name="radio_margin_left">16dp</dimen>
+    <dimen name="image_view_icon_size">120dp</dimen>
 </resources>

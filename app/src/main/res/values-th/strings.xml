@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="calcuation">คำนวน</string>
+    <string name="skip">Skip</string>
+    <string name="by_continuing_your_accept_the_term_of_use_and_privacy_policy">By continuing your accept the Term of Use and Privacy Policy</string>
 </resources>
