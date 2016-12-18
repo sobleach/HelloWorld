@@ -1,6 +1,7 @@
 package com.example.thum.helloworld;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -111,6 +112,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             Toast.makeText(MainActivity.this, "Result = " + sum,
                     Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(MainActivity.this,
+                    SecondActivity.class);
+            intent.putExtra("result", sum);
+
+            // Playground
+            Coordinate c1 = new Coordinate();
+            c1.x = 5;
+            c1.y = 10;
+            c1.z = 20;
+
+            Bundle bundle = new Bundle();
+            bundle.putInt("x", c1.x);
+            bundle.putInt("y", c1.y);
+            bundle.putInt("z", c1.z);
+            intent.putExtra("cBundel", bundle);
+
+            CoordinateSerializable c2 = new CoordinateSerializable();
+            c2.x = 5;
+            c2.y = 10;
+            c2.z = 20;
+            intent.putExtra("cSerializable", c2);
+
+            CoordinateParcelable c3 = new CoordinateParcelable();
+            c3.x = 5;
+            c3.y = 10;
+            c3.z = 20;
+            intent.putExtra("cParcelable", c3);
+
+            startActivity(intent);
         }
     }
 
