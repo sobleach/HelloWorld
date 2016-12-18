@@ -29,8 +29,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/tvWelcome"
@@ -66,25 +66,25 @@
 
         <TextView
             android:id="@+id/tvSkip"
+            style="@style/TextViewStyle.Green"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
             android:paddingBottom="16dp"
             android:paddingTop="20dp"
-            android:text="@string/skip"
-            android:textColor="@android:color/white"
-            android:textSize="14sp" />
+            android:text="@string/skip" />
 
         <TextView
             android:id="@+id/tvLicense"
+            style="@style/TextViewStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="4dp"
             android:text="@string/by_continuing_your_accept_the_term_of_use_and_privacy_policy"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="13sp" />
+            android:textSize="13.5sp" />
     </LinearLayout>
 
 
