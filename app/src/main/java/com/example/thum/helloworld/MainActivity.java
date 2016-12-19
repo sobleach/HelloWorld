@@ -22,6 +22,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, TextView.OnEditorActionListener {
 
+    int x, y,z; // Save/Restore in Activity's instance state
+
     TextView tvHello;
     EditText etHello;
     EditText etNumber;
@@ -141,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             c3.z = 20;
             intent.putExtra("cParcelable", c3);
 
-            startActivity(intent);
+//            startActivity(intent);
         }
     }
 
@@ -176,5 +178,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        // Save thing(s) here
+//        outState.putString("text", tvResult.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        // Restore thing(s) here
+//        tvResult.setText(savedInstanceState.getString("text"));
     }
 }
