@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             bundle.putInt("x", c1.x);
             bundle.putInt("y", c1.y);
             bundle.putInt("z", c1.z);
-            intent.putExtra("cBundel", bundle);
+            intent.putExtra("cBundle", bundle);
 
             CoordinateSerializable c2 = new CoordinateSerializable();
             c2.x = 5;
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             c3.z = 20;
             intent.putExtra("cParcelable", c3);
 
-//            startActivity(intent);
+            startActivity(intent);
         }
     }
 

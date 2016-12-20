@@ -3,11 +3,15 @@ package com.example.thum.helloworld;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class SecondActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView tvResult;
+    Button btnOK;
+
     int sum = 0;
 
     @Override
@@ -33,5 +37,17 @@ public class SecondActivity extends AppCompatActivity {
 
     private void initInstances() {
         tvResult = (TextView) findViewById(R.id.tvResult);
+        btnOK = (Button) findViewById(R.id.btnOK);
+        btnOK.setOnClickListener(this);
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        System.out.println(v.toString());
+        if (v == btnOK) {
+            finish();
+        }
+
     }
 }
