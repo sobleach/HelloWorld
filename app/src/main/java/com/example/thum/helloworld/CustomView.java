@@ -6,6 +6,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -176,15 +177,17 @@ public class CustomView extends View {
     @Override
     protected Parcelable onSaveInstanceState() {
         Parcelable superState = super.onSaveInstanceState();
-        CustomViewSavedState savedState = new CustomViewSavedState(superState);
-        savedState.setBlue(isBlue);
+        BundleSavedState savedState = new BundleSavedState(superState);
+        Bundle bundle = new Bundle();
+        bundle.putBoolean("isBlue", isBlue);
+        savedState.setBundle(bundle);
         return savedState;
     }
 
     @Override
     protected void onRestoreInstanceState(Parcelable state) {
-        CustomViewSavedState savedState = (CustomViewSavedState) state;
+        BundleSavedState savedState = (BundleSavedState) state;
         super.onRestoreInstanceState(savedState.getSuperState());
-        isBlue = savedState.isBlue();
+        isBlue = savedState.getBundle().getBoolean("isBlue");
     }
 }
