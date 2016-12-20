@@ -193,7 +193,7 @@
                 android:layout_height="160dp" />
 
             <com.example.thum.helloworld.CustomView
-                android:id="@+id/view2 "
+                android:id="@+id/view2"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 app:isBlue="true" />
